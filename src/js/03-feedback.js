@@ -8,7 +8,10 @@ const refs ={
 
 
 refs.form.addEventListener('submit', onFormSubmit);
-const formData ={}
+const formData ={
+    email: '',
+    message: ''
+}
 
 onFormChange()
 
@@ -27,14 +30,18 @@ function onInputChanges(e){
     localStorage.setItem('feedback-form-state', JSON.stringify(formData))
 };
 
+
 function onFormChange(){
     const saveMessage = localStorage.getItem('feedback-form-state');
     const parsellingMasseg =  JSON.parse(saveMessage)
-    if(parsellingMasseg.email){
-        refs.email.value =  parsellingMasseg.email;
-    }
-    if(parsellingMasseg.message){
-        refs.textarea.value = parsellingMasseg.message;
-    }
+    if(parsellingMasseg){
+       refs.email.value =  parsellingMasseg.email;
+       refs.textarea.value =  parsellingMasseg.message; 
+       
+    } 
+
+    
+
+
 }
 
