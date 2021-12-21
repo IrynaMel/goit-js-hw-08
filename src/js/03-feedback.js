@@ -36,9 +36,16 @@ function onFormSubmit(e){
         console.log(parsellingMasseg)
     } 
     else
-     {console.log(formData);}
+     {console.log(formData)
+        formData ={
+            email:"",
+            message:""
+        }}
+
+     
     
     }
+
 
 
 refs.form.addEventListener("input", throttle(onInputChanges, 500 ));
