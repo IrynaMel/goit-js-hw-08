@@ -21,7 +21,7 @@ function onFormSubmit(e) {
 //     console.log("There is nothing to submit! Fill up the fields!");
 //     return;
 //   }
-  if (!form['email'].value && !form['message'].value){
+  if (!form['email'].value || !form['message'].value){
     // alert('All fields must be filled')
     return
   }
