@@ -22,7 +22,7 @@ function onFormSubmit(e) {
 //     return;
 //   }
   if (!form['email'].value || !form['message'].value){
-    // alert('All fields must be filled')
+    console.log('All fields must be filled')
     return
   }
 //   else{ 
